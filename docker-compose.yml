@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack_demo
+    ports:
+      - '4563-4584:4563-4584'
+      - '8055:8080'
+    environment:
+      - SERVICES=s3,sqs
+      - DEBUG=1
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - "6379:6379"
