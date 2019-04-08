@@ -29,6 +29,10 @@
 
  `./setup.sh`
  
+- Run below command to start the app,
+
+ `adonis serve --dev`
+ 
 ## [AdonisJS](https://adonisjs.com/docs/4.1/installation)
 
 - This framework is very similar to laravel framework, we can create migration (<https://adonisjs.com/docs/4.1/migrations>), controller (<https://adonisjs.com/docs/4.1/controllers>) just like laravel.
