@@ -28,6 +28,16 @@
 - After that run the script by this command, 
 
  `./setup.sh`
+
+- Rename `.env.example` to `.env` and assign database name to `DB_DATABASE` env variable.
+
+- After that install adonis cli by below command,   
+
+ `npm i -g @adonisjs/cli`
+
+- Run migration using below command,   
+
+ `adonis migration:run`
  
 - Run below command to start the app,
 
@@ -37,10 +47,7 @@
 
 - This framework is very similar to laravel framework, we can create migration (<https://adonisjs.com/docs/4.1/migrations>), controller (<https://adonisjs.com/docs/4.1/controllers>) just like laravel.
 - Configuration for MySql database is in `config/database.js`.
-- I have created the migration of two tables : Users and Todos, In Users table we will store users and in todo tables we will store todo note of each user. In order to run migrations run below command.   
-
- `adonis migration:run`
- 
+- I have created the migration of two tables : Users and Todos, In Users table we will store users and in todo tables we will store todo note of each user.
 - Relationships between to models can be defined also like laravel, see `app/models`. More on this is explained in here <https://adonisjs.com/docs/4.1/relationships>
 - There is a postmaster collection of endpoints to check S3, redis, SQS, Prometheus in AdonisJs. The descrition for each point is given in it. You have to import it to the postmaster.
 - Support for the redis in AdonisJs is explained here <https://adonisjs.com/docs/4.1/redis>, Configuration file for redis can be changed from `config/redis.js`.
