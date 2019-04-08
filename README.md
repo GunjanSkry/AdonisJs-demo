@@ -11,37 +11,37 @@
 
 - Install all dependencies by executing below command :   
 
- `npm install`
+	`npm install`
 
 - We will be using [localstack](https://github.com/localstack/localstack) to mimic SQS and S3 storage in local environment. Below command will setup localstack and redis into the docker.   
 
- `docker-compose up -d`
+ 	`docker-compose up -d`
  
 - After this you have to install awscli in order to create S3 bucket and SQS queues. To install awscli run below command.
 
- `pip3 install awscli`
+ 	`pip3 install awscli`
  
 - We will create an S3 bucket and SQS queue in localstack. The `setup.sh` file will create the bucket and  SQS queue that will be used in this demo but before we have to give permission to this file. Run below command to give permission.   
 
- `chmod +x setup.sh`
+ 	`chmod +x setup.sh`
  
 - After that run the script by this command, 
 
- `./setup.sh`
+ 	`./setup.sh`
 
 - Rename `.env.example` to `.env` and assign database name to `DB_DATABASE` env variable.
 
 - After that install adonis cli by below command,   
 
- `npm i -g @adonisjs/cli`
+ 	`npm i -g @adonisjs/cli`
 
 - Run migration using below command,   
 
- `adonis migration:run`
+ 	`adonis migration:run`
  
 - Run below command to start the app,
 
- `adonis serve --dev`
+ 	`adonis serve --dev`
  
 ## [AdonisJS](https://adonisjs.com/docs/4.1/installation)
 
