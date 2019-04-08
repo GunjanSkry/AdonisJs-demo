@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -11,19 +11,19 @@
 |
 */
 const providers = [
-  '@adonisjs/framework/providers/AppProvider',
-  '@adonisjs/framework/providers/ViewProvider',
-  '@adonisjs/lucid/providers/LucidProvider',
-  '@adonisjs/bodyparser/providers/BodyParserProvider',
-  '@adonisjs/cors/providers/CorsProvider',
-  '@adonisjs/shield/providers/ShieldProvider',
-  '@adonisjs/session/providers/SessionProvider',
-  '@adonisjs/auth/providers/AuthProvider',
+  "@adonisjs/framework/providers/AppProvider",
+  "@adonisjs/framework/providers/ViewProvider",
+  "@adonisjs/lucid/providers/LucidProvider",
+  "@adonisjs/bodyparser/providers/BodyParserProvider",
+  "@adonisjs/cors/providers/CorsProvider",
+  "@adonisjs/shield/providers/ShieldProvider",
+  "@adonisjs/session/providers/SessionProvider",
+  "@adonisjs/auth/providers/AuthProvider",
   // Chekc out https://adonisjs.com/docs/4.1/file-system for AWS S3 Storage
-  '@adonisjs/drive/providers/DriveProvider',
+  "@adonisjs/drive/providers/DriveProvider",
   // Check out https://adonisjs.com/docs/4.1/redis for redis setup
-  '@adonisjs/redis/providers/RedisProvider'
-]
+  "@adonisjs/redis/providers/RedisProvider"
+];
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +34,7 @@ const providers = [
 | Providers for migrations, tests etc.
 |
 */
-const aceProviders = [
-  "@adonisjs/lucid/providers/MigrationsProvider",
-];
+const aceProviders = ["@adonisjs/lucid/providers/MigrationsProvider"];
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +48,7 @@ const aceProviders = [
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {}
+const aliases = {};
 
 /*
 |--------------------------------------------------------------------------
@@ -60,8 +58,8 @@ const aliases = {}
 | Here you store ace commands for your package
 |
 */
-const commands = []
+const commands = [];
 
-const jobs = ['App/Jobs/User']
+const jobs = ["App/Jobs/User"];
 
-module.exports = { providers, aceProviders, aliases, commands, jobs }
+module.exports = { providers, aceProviders, aliases, commands, jobs };

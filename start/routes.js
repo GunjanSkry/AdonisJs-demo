@@ -1,9 +1,8 @@
-'use strict'
+"use strict";
 
-const StoreUser = require('../app/Jobs/StoreUser');
-const StoreTodo = require('../app/Jobs/StoreTodo');
-const { Register } = require('../config/prometheus');
-
+const StoreUser = require("../app/Jobs/StoreUser");
+const StoreTodo = require("../app/Jobs/StoreTodo");
+const { Register } = require("../config/prometheus");
 
 /*
 |--------------------------------------------------------------------------
@@ -18,24 +17,24 @@ const { Register } = require('../config/prometheus');
 |
 */
 
-StoreUser.start()
-StoreTodo.start()
+StoreUser.start();
+StoreTodo.start();
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
 
-Route.on('/').render('welcome')
+Route.on("/").render("welcome");
 
-Route.post('/todo', 'TodoController.create')
-Route.get('/todo', 'TodoController.show')
+Route.post("/todo", "TodoController.create");
+Route.get("/todo", "TodoController.show");
 
-Route.post('/redis', 'RedisTestController.create')
-Route.get('/redis', 'RedisTestController.show')
+Route.post("/redis", "RedisTestController.create");
+Route.get("/redis", "RedisTestController.show");
 
-Route.post('/s3', 'S3TestController.create')
-Route.get('/s3', 'S3TestController.show')
+Route.post("/s3", "S3TestController.create");
+Route.get("/s3", "S3TestController.show");
 
-Route.get('/metrics', ({ request, response }) => {
-    response.header('Content-Type', Register.contentType);
-    response.send(Register.metrics());
-})
+Route.get("/metrics", ({ request, response }) => {
+  response.header("Content-Type", Register.contentType);
+  response.send(Register.metrics());
+});
