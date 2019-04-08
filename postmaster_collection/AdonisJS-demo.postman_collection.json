@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "9dc46204-087b-4f30-a0fb-1917e04500ca",
+		"name": "AdonisJS-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3333/todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": {\n\t\t\"user_id\": 1234,\n\t\t\"username\": \"Jhon\",\n\t\t\"email\": \"Jhon@test.com\",\n\t\t\"phone\": 7453623478\n\t},\n\t\"todo\": \"Hello world\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/todo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"todo"
+					]
+				},
+				"description": "Sends paylod to SQS queue named user in which \"user\" will be saved in \"users\" table in database and from that processed data will be sent to another queue named \"todo\" in which user associated to is stored to \"todos\" table."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/redis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Hello world from Redis!"
+				},
+				"url": {
+					"raw": "http://localhost:3333/redis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"redis"
+					]
+				},
+				"description": "Create cache in redis"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/redis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3333/redis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"redis"
+					]
+				},
+				"description": "Get cached data from redis"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/s3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Hello From S3!"
+				},
+				"url": {
+					"raw": "http://localhost:3333/s3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"s3"
+					]
+				},
+				"description": "Saves the raw data to s3"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/s3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3333/s3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"s3"
+					]
+				},
+				"description": "Gets s3 file content"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/metrics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\" : {\n\t\t\"user_id\": 1239,\n\t\t\"username\" : \"legend\",\n\t\t\"phone\": 7366263745,\n\t\t\"email\": \"gunjan@qtp.com\"\n\t},\n\t\"todo\" : \"testinggg 3333\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/metrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"metrics"
+					]
+				},
+				"description": "Gets all prometheus data "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/s3?user_id=1234",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3333/s3?user_id=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"s3"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1234"
+						}
+					]
+				},
+				"description": "Gets user information and todo notes of that user from s3 file"
+			},
+			"response": []
+		}
+	]
+}
